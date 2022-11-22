@@ -1,0 +1,40 @@
+<div id="app" class="app">
+  <nav class="navbar navbar-expand navbar-light bg-warning">
+    <a href="#" class="navbar-brand">Gás do Almir</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/admin/novo-cliente" class="nav-link" *ngIf="showAdminBoard" routerLink="admin/novo-cliente">Cadastrar Cliente</a>
+      </li>
+      <li class="nav-item">
+        <a href="/admin/nova-venda" class="nav-link" *ngIf="showAdminBoard" routerLink="admin/nova-venda">Cadastrar Venda</a>
+      </li>
+      <li class="nav-item">
+        <a href="/admin/cliente" class="nav-link" *ngIf="showAdminBoard" routerLink="admin/cliente">Clientes</a>
+      </li>
+      <li class="nav-item">
+        <a href="/admin/venda" class="nav-link" *ngIf="showAdminBoard" routerLink="admin/venda">Vendas</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <alert></alert>
+    <router-outlet></router-outlet>
+    <app-loader></app-loader>
+  </div>
+</div>

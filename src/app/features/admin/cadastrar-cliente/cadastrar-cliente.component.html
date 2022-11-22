@@ -1,0 +1,91 @@
+<app-page-content titulo = "Cadastrar Clientes">
+  <form
+    name="form"
+    [formGroup]="form"
+    #f="ngForm"
+    novalidate
+  >
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        name="nome"
+        formControlName="nome"
+        required
+        minlength="3"
+        maxlength="144"
+
+      />
+
+    </div>
+
+    <div class="form-group">
+      <label for="Rua">Rua</label>
+      <input
+        type="text"
+        class="form-control"
+        name="Rua"
+        formControlName="rua"
+        required
+        minlength="3"
+        maxlength="50"
+
+      />
+
+
+    </div>
+
+    <div class="form-group">
+      <label for="Numero">Numero</label>
+      <input
+        type="text"
+        class="form-control"
+        name="Numero"
+        formControlName="numero"
+        required
+        minlength="1"
+        maxlength="5"
+
+      />
+
+    </div>
+
+    <div class="form-group">
+      <label for="Bairro">Bairro</label>
+      <input
+        type="text"
+        class="form-control"
+        name="Bairro"
+        formControlName="bairro"
+        required
+        minlength="3"
+        maxlength="50"
+
+      />
+
+    </div>
+
+    <div class="form-group">
+
+      <label for="Cidade">Cidade</label>
+      <input
+        type="text"
+        class="form-control"
+        name="Cidade"
+        formControlName="cidade"
+        required
+        minlength="3"
+        maxlength="50"
+
+      />
+
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary btn-block"(click)="cadastrarCliente()">Cadastrar</button>
+    </div>
+
+  </form>
+
+</app-page-content>

@@ -1,0 +1,64 @@
+<app-page-content titulo="Home">
+
+    <mat-card-header>
+      <mat-card-title class="titulo">Gás do Almir</mat-card-title>
+    </mat-card-header>
+    <mat-tab-group animationDuration="0ms">
+      <mat-tab label="Quem somos">
+        <mat-card class="mat-tab">
+        <img src="../../assets/home.jpg" alt="Foto de um capo aberto com duas ferramentas | Créditos: Ryan Doka - Pixabay ">
+        <div class="mat-tab-texto">
+            <span class="mat-tab-titulo">Quem somos</span>
+            <p>
+            A página gás do almir é uma idéia que surgiu da necessidade de realizar o controle de vendas de gás do nosso negócio aliado ao trabalho
+            de conclusão do curso de Análise e desenvolvimento de sistemas da ULBRA - Universidade Luterana do Brasil, câmpus Canoas/RS.
+            </p>
+            <p>
+             As tecnologias utilizadas para desenvolver essa aplicação foram: <br>
+             - Frontend: Angular 10 / Html / Css / TypeScript <br>
+             - Backend: Java 8 / Springboot 2.1.8 / JsonWebToken <br>
+             - Banco de dados: PostgreeSql<br>
+            </p>
+              <div class="acoes" *ngIf="!usuarioLogado">
+              <p>
+                Utilize o botão abaixo para fazer login:
+              </p>
+              <div class="botoes-home">
+              <a mat-raised-button color="primary" href="/login">Login</a>
+            </div>
+            </div>
+          </div>
+      </mat-card>
+      </mat-tab>
+      <mat-tab label="Agenda">
+        <mat-card class="mat-tab">
+
+          <img src="../../assets/agenda.jpg" alt="Foto de um fusca com um mecanico embaixo fazendo manutenção | Créditos: Ryan Doka - Pixabay">
+          <div class="mat-tab-texto">
+            <span class="mat-tab-titulo">Agenda</span>
+            <p>
+              O objetivo desta página é realizar o controle e o armazenamento on line dos clientes da empresa e das vendas realizadas, facilitando o controle financeiro
+              e a visualização das operações realizadas. O projeto tem por objetivo ser simples e intuitivo facilitando a utilização do usuário final, pois o mesmo não
+              não está familiarizado com esse tipo de tecnologia.
+            </p>
+
+          </div>
+        </mat-card>
+      </mat-tab>
+      <mat-tab label="Contato">
+        <mat-card class="mat-tab">
+          <img src="../../assets/contato.jpg" alt="Foto de um capo aberto com um homem fazendo manutencao | Créditos: Ryan Doka - Pixabay">
+          <div class="mat-tab-texto">
+            <span class="mat-tab-titulo">Contato</span>
+            <div>
+            <p>- Desenvolvido por Luís Ricardo Oliveira de Souza </p>
+            <p>- Email: ricardu@rede.ulbra.br </p>
+            <p>- Repositório Backend: <a>Github</a></p>
+            <p>- Repositório Frontend: <a>Github</a></p>
+            </div>
+          </div>
+        </mat-card>
+      </mat-tab>
+    </mat-tab-group>
+
+</app-page-content>
